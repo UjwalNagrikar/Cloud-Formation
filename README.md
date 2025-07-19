@@ -421,10 +421,6 @@ We welcome contributions to improve these templates! Please follow these guideli
 - Add comprehensive comments
 - Follow CloudFormation naming conventions
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Support
 
 For support and questions:
