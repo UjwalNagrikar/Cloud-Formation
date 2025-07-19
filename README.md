@@ -1,18 +1,6 @@
-<div align="center">
-
 # AWS CloudFormation Infrastructure Templates
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" width="200"/>
-<img src="https://raw.githubusercontent.com/yaml/yaml-spec/main/spec/yaml-logo.svg" alt="YAML" width="80" style="margin-left: 20px"/>
-
-[![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/cloudformation/)
-[![YAML](https://img.shields.io/badge/YAML-Template-blue?style=for-the-badge&logo=yaml)](https://yaml.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Region](https://img.shields.io/badge/Region-ap--south--1-yellow?style=for-the-badge)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
-
 A collection of AWS CloudFormation templates for provisioning scalable and secure cloud infrastructure, featuring VPC networking and EC2 instances optimized for the Asia Pacific (Mumbai) region.
-
-</div>
 
 ## 📋 Table of Contents
 
