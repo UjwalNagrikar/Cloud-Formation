@@ -3,7 +3,9 @@
 # AWS CloudFormation Infrastructure Templates
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" width="200"/>
-<img src="https://raw.githubusercontent.com/yaml/yaml-spec/main/spec/yaml-logo.svg" alt="YAML" width="80" style="margin-left: 20px"/>
+<a href="https://yaml.org/">
+  <img src="https://raw.githubusercontent.com/yaml/yaml-spec/main/spec/yaml-logo.svg" alt="YAML" width="80" style="margin-left: 20px"/>
+</a>
 
 [![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/cloudformation/)
 ![YAML Template](https://img.shields.io/badge/YAML-Template-blue?style=for-the-badge)
