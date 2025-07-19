@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Launch a basic EC2 instance in ap-south-1 with a specified AMI
+
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to SSH into the instance
+    Type: AWS::EC2::KeyPair::KeyName
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0f918f7e67a3323f0 #Raplace with your AMI ID
+      InstanceType: t2.micro
+      KeyName: !Ref KeyName
+      AvailabilityZone: ap-south-1a
+      Tags:
+        - Key: Name
+          Value: My-Server
+
+Outputs:
+  InstanceId:
+    Description: The ID of the EC2 instance
+    Value: !Ref MyEC2Instance
+  PublicIP:
+    Description: Public IP of the EC2 instance
+    Value: !GetAtt MyEC2Instance.PublicIp
