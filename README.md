@@ -45,10 +45,6 @@ This repository provides production-ready CloudFormation templates for deploying
 
 ### VPC Infrastructure (`aws-vpc.yaml`)
 
-<div align="center">
-<img src="https://d1.awsstatic.com/Products/product-name/diagrams/product-page-diagram_Amazon-VPC_HIW.b8086e18b32cac45c4a3c5e2ef82fd30e1cfc3a5.png" alt="AWS VPC Architecture" width="500"/>
-</div>
-
 ```
 ┌─────────────────────────────────────────────────┐
 │                    MyVPC                        │
