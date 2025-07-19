@@ -1,6 +1,18 @@
+<div align="center">
+
 # AWS CloudFormation Infrastructure Templates
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" width="200"/>
+<img src="https://raw.githubusercontent.com/yaml/yaml-spec/main/spec/yaml-logo.svg" alt="YAML" width="80" style="margin-left: 20px"/>
+
+[![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/cloudformation/)
+[![YAML](https://img.shields.io/badge/YAML-Template-blue?style=for-the-badge&logo=yaml)](https://yaml.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Region](https://img.shields.io/badge/Region-ap--south--1-yellow?style=for-the-badge)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+
 A collection of AWS CloudFormation templates for provisioning scalable and secure cloud infrastructure, featuring VPC networking and EC2 instances optimized for the Asia Pacific (Mumbai) region.
+
+</div>
 
 ## 📋 Table of Contents
 
@@ -33,38 +45,56 @@ This repository provides production-ready CloudFormation templates for deploying
 
 ### VPC Infrastructure (`aws-vpc.yaml`)
 
+<div align="center">
+<img src="https://d1.awsstatic.com/Products/product-name/diagrams/product-page-diagram_Amazon-VPC_HIW.b8086e18b32cac45c4a3c5e2ef82fd30e1cfc3a5.png" alt="AWS VPC Architecture" width="500"/>
+</div>
+
 ```
 ┌─────────────────────────────────────────────────┐
 │                    MyVPC                        │
 │                 10.0.0.0/16                     │
+│    🏷️  DNS Support & Hostnames Enabled          │
 │                                                 │
 │  ┌─────────────────────────────────────────────┐│
 │  │             MySubnet                        ││
 │  │            10.0.1.0/24                      ││
 │  │          (ap-south-1a)                      ││
+│  │    🌐 Auto-assign Public IP                 ││
 │  │                                             ││
 │  │  ┌─────────────────────────────────────────┐││
-│  │  │         EC2 Instance                    │││
+│  │  │    🖥️  EC2 Instance                     │││
 │  │  │        (Amazon Linux 2)                 │││
 │  │  │         t2.micro                        │││
+│  │  │    🔒 Security Group (SSH:22)           │││
 │  │  └─────────────────────────────────────────┘││
 │  └─────────────────────────────────────────────┘│
 │                     │                           │
 │              ┌──────▼──────┐                    │
-│              │   Route     │                    │
-│              │   Table     │                    │
+│              │  📋 Route   │                    │
+│              │    Table    │                    │
 │              └──────┬──────┘                    │
 └─────────────────────┼─────────────────────────────┘
                       │
                ┌──────▼──────┐
-               │  Internet   │
+               │  🌍 Internet │
                │   Gateway   │
                └─────────────┘
 ```
 
 ## 📄 Templates
 
+<div align="center">
+
+| Template | Purpose | Resources | Use Case |
+|----------|---------|-----------|----------|
+| 🏗️ **aws-vpc.yaml** | Complete Infrastructure | VPC + EC2 | Production Deployments |
+| ⚡ **ec2.yaml** | Quick Instance | EC2 Only | Development & Testing |
+
+</div>
+
 ### 1. Complete VPC Infrastructure (`aws-vpc.yaml`)
+
+<img src="https://img.shields.io/badge/Resources-8-blue?style=flat-square"/> <img src="https://img.shields.io/badge/Complexity-Medium-orange?style=flat-square"/> <img src="https://img.shields.io/badge/Cost-Low-green?style=flat-square"/>
 
 **Purpose**: Deploys a complete networking stack with EC2 instance
 
@@ -79,6 +109,8 @@ This repository provides production-ready CloudFormation templates for deploying
 
 ### 2. Standalone EC2 Instance (`ec2.yaml`)
 
+<img src="https://img.shields.io/badge/Resources-1-blue?style=flat-square"/> <img src="https://img.shields.io/badge/Complexity-Simple-green?style=flat-square"/> <img src="https://img.shields.io/badge/Cost-Minimal-green?style=flat-square"/>
+
 **Purpose**: Deploys a basic EC2 instance in default VPC
 
 **Resources Created**:
@@ -88,6 +120,12 @@ This repository provides production-ready CloudFormation templates for deploying
 **Use Case**: Quick instance deployment for development or testing
 
 ## 🛠️ Prerequisites
+
+<div align="center">
+<img src="https://img.shields.io/badge/AWS-CLI-orange?style=for-the-badge&logo=amazon-aws"/>
+<img src="https://img.shields.io/badge/CloudFormation-IAM-blue?style=for-the-badge&logo=amazon-aws"/>
+<img src="https://img.shields.io/badge/EC2-KeyPair-yellow?style=for-the-badge&logo=amazon-ec2"/>
+</div>
 
 Before deploying these templates, ensure you have:
 
@@ -113,6 +151,10 @@ aws ec2 describe-key-pairs --region ap-south-1
 ```
 
 ## 🚀 Quick Start
+
+<div align="center">
+<img src="https://img.shields.io/badge/Deployment-Time-blue?style=flat-square"/> **~5-10 minutes**
+</div>
 
 ### Deploy Complete VPC Infrastructure
 
@@ -198,6 +240,12 @@ MyEC2Instance:
 
 ## 🔒 Security Considerations
 
+<div align="center">
+<img src="https://img.shields.io/badge/Security-Grade-red?style=for-the-badge&logo=security"/>
+<img src="https://img.shields.io/badge/Current-Basic-orange?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Recommended-Enhanced-green?style=for-the-badge"/>
+</div>
+
 ### Current Security Configuration
 
 - **SSH Access**: Currently allows SSH from anywhere (`0.0.0.0/0`)
@@ -249,6 +297,10 @@ MyEC2Instance:
 - Implement network ACLs for additional security layers
 
 ## 📊 Monitoring and Maintenance
+
+<div align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/AmazonCloudWatch.png" alt="CloudWatch" width="150"/>
+</div>
 
 ### CloudFormation Stack Monitoring
 
@@ -329,9 +381,13 @@ aws cloudformation describe-stack-events \
 
 ## 🧹 Cleanup
 
-### Delete Resources
+<div align="center">
+⚠️ **Important**: Always delete CloudFormation stacks to avoid unnecessary charges.
 
-**Important**: Always delete CloudFormation stacks to avoid unnecessary charges.
+<img src="https://img.shields.io/badge/Cost-Alert-red?style=for-the-badge&logo=amazon-aws"/>
+</div>
+
+### Delete Resources
 
 ```bash
 # Delete VPC stack (deletes all associated resources)
@@ -402,4 +458,14 @@ For support and questions:
 
 ---
 
+<div align="center">
+
 **⚠️ Important Note**: These templates create billable AWS resources. Always monitor your AWS costs and delete resources when no longer needed.
+
+<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazon-aws"/>
+<img src="https://img.shields.io/badge/Infrastructure-as--Code-blue?style=for-the-badge"/>
+
+**Powered by AWS CloudFormation | Optimized for ap-south-1 Region**
+
+</div>
