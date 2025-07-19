@@ -10,7 +10,7 @@ Resources:
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0f918f7e67a3323f0 #Raplace with your AMI ID
+      ImageId: ami-0f918f7e67a4423f0 #Raplace with your AMI ID
       InstanceType: t2.micro
       KeyName: !Ref KeyName
       AvailabilityZone: ap-south-1a
