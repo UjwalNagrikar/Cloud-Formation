@@ -6,7 +6,7 @@
 <img src="https://raw.githubusercontent.com/yaml/yaml-spec/main/spec/yaml-logo.svg" alt="YAML" width="80" style="margin-left: 20px"/>
 
 [![AWS](https://img.shields.io/badge/AWS-CloudFormation-orange?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/cloudformation/)
-[![YAML](https://img.shields.io/badge/YAML-blue?logo=yaml&logoColor=white&style=for-the-badge)](https://yaml.org/)
+![YAML Template](https://img.shields.io/badge/YAML-Template-blue?style=for-the-badge)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Region](https://img.shields.io/badge/Region-ap--south--1-yellow?style=for-the-badge)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 
